@@ -15,6 +15,18 @@ int array[n];
     }
  }
 
+//mostrar elementos do array
+void mostrar() {
+   printf("[ ");
+ 
+   int i;
+   for (i = 0; i < n; i++) {
+      printf("%d ", array[i]);
+   }
+ 
+   printf("] \n");
+}
+
 void swap(int i, int j) {
    int temp = array[i];
    array[i] = array[j];
@@ -46,12 +58,12 @@ void quicksort() {
 void main() {
    srand(time(NULL));
    decrescente();
-   //mostrar();     
+   mostrar();     
    clock_t comeco = clock();
    quicksort();
    clock_t fim = clock();
    clock_t total = (fim - comeco);
  
-   //mostrar();
+   mostrar();
    printf("Tempo para ordenar: %f ms.", (float)total);
 }
