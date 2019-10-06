@@ -63,7 +63,6 @@ void main() {
    quicksort();
    clock_t fim = clock();
    clock_t total = (fim - comeco);
- 
    mostrar();
    printf("Tempo para ordenar: %f ms.", (float)total);
 }
